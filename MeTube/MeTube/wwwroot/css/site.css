@@ -1,37 +1,29 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
-for details on configuring this project to bundle and minify static web assets. */
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿.bg-color-dark {
+    background-color: #483D8B;
+    color: #A9A9A9;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.footer {
+    background-color: #483D8B;
+    color: #A9A9A9;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+.nav-item > a:hover, .navbar-brand:hover {
+    color: #FFFFFF;
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
+iframe {
+    overflow: hidden;
 }
 
-/* QR code generator */
-#qrCode {
-    margin: 15px;
+.tube-author {
+    font-size: 2.5em;
 }
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
+.tube-views {
+    font-size: 1.8em;
+}
+
+.img-fluid.tube-thumbnail {
+    max-width: 300px;
 }
