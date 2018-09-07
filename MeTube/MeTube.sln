@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeTube", "MeTube\MeTube.csproj", "{BA3B6CB1-65C2-43FE-A0B5-C67FF203532C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeTube", "MeTube\MeTube.csproj", "{BA3B6CB1-65C2-43FE-A0B5-C67FF203532C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeTube.Models", "MeTube.Models\MeTube.Models.csproj", "{063D44AD-9317-4F9B-B0C0-A44E527655F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeTube.Data", "MeTube.Data\MeTube.Data.csproj", "{A24E2F80-8F5C-47A4-8732-23607A23D1BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeTube.Services", "MeTube.Services\MeTube.Services.csproj", "{DA7F1384-0330-43B7-A792-55FB7ED3686A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{BA3B6CB1-65C2-43FE-A0B5-C67FF203532C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA3B6CB1-65C2-43FE-A0B5-C67FF203532C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA3B6CB1-65C2-43FE-A0B5-C67FF203532C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{063D44AD-9317-4F9B-B0C0-A44E527655F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{063D44AD-9317-4F9B-B0C0-A44E527655F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{063D44AD-9317-4F9B-B0C0-A44E527655F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{063D44AD-9317-4F9B-B0C0-A44E527655F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A24E2F80-8F5C-47A4-8732-23607A23D1BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A24E2F80-8F5C-47A4-8732-23607A23D1BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A24E2F80-8F5C-47A4-8732-23607A23D1BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A24E2F80-8F5C-47A4-8732-23607A23D1BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA7F1384-0330-43B7-A792-55FB7ED3686A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA7F1384-0330-43B7-A792-55FB7ED3686A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA7F1384-0330-43B7-A792-55FB7ED3686A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA7F1384-0330-43B7-A792-55FB7ED3686A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
