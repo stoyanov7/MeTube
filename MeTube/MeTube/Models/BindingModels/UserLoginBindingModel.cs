@@ -1,12 +1,10 @@
 ﻿namespace MeTube.Models.BindingModels
 {
     using System.ComponentModel.DataAnnotations;
-    using Utilities;
-
+    
     public class UserLoginBindingModel
     {
         [Required]
-        [MinLength(3)]
         [Display(Name = "Username")]
         public string Username { get; set; }
 
@@ -14,5 +12,10 @@
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
+
+        [Display(Name = "Remember me?")]
+        public bool RememberMe { get; set; }
+
+        public string ReturnUrl { get; set; }
     }
 }
