@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <li class="nav-item active col-md-3">
+        <a class="nav-link h5" href="/">Home</a>
+    </li>
+    <li class="nav-item active col-md-3">
+        <a class="nav-link h5" href="/user/profile">Profile</a>
+    </li>
+    <li class="nav-item active col-md-3">
+        <a class="nav-link h5" href="/tube/upload">Upload</a>
+    </li>
+    <li class="nav-item active col-md-3">
+        <a class="nav-link h5" href="/user/logout">Logout</a>
+    </li>
+}
+else
+{
+    <li class="nav-item active col-md-4">
+        <a asp-controller="Home" asp-action="Index" class="nav-link h5">Home</a>
+    </li>
+    <li class="nav-item active col-md-4">
+        <a asp-controller="User" asp-action="Register" class="nav-link h5">Register</a>
+    </li>
+}

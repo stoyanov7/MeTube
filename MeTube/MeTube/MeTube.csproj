@@ -10,8 +10,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MeTube.Data\MeTube.Data.csproj" />
     <ProjectReference Include="..\MeTube.Services\MeTube.Services.csproj" />
+    <ProjectReference Include="..\MeTube.Utilities\MeTube.Utilities.csproj" />
   </ItemGroup>
 
   <ItemGroup>
