@@ -1,5 +1,6 @@
 ﻿namespace MeTube
 {
+    using AutoMapper;
     using Data;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
@@ -35,12 +36,14 @@
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireUppercase = false;
                 options.Password.RequiredLength = 1;
-                options.User.RequireUniqueEmail = false;
+                options.User.RequireUniqueEmail = true;
             })
             .AddEntityFrameworkStores<MeTubeContext>()
             .AddDefaultTokenProviders();
 
+            // Add application services.
             services.AddTransient<IDatabaseInitializerService, DatabaseInitializerService>();
+            services.AddTransient<IUserService, UserService>();
 
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -50,6 +53,7 @@
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddAutoMapper();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -70,6 +74,7 @@
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {
