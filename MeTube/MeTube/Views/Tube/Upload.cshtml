@@ -1,0 +1,51 @@
+﻿@using MeTube.Models.BindingModels
+@model TubeUploadBindingModel
+
+@{
+    ViewData["Title"] = "Upload";
+}
+
+<div class="text-center mb-3">
+    <h1>@ViewData["Title"]</h1>
+</div>
+<hr class="my-2">
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="form-holder text-center">
+            <form asp-page="/User/Login" class="form-inline" method="POST">
+                <fieldset>
+                    <div class="form-group">
+                        <label asp-for="Title" class="sr-only"></label>
+                        <input type="text" asp-for="Title" class="form-control" placeholder="Title" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label asp-for="Author" class="sr-only"></label>
+                        <input type="text" asp-for="Author" class="form-control" placeholder="Author" />
+                        <span asp-validation-for="Author" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label asp-for="YouTubeLink" class="sr-only"></label>
+                        <input type="text" asp-for="YouTubeLink" class="form-control" placeholder="YouTubeLink" />
+                        <span asp-validation-for="YouTubeLink" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label asp-for="Description" class="sr-only"></label>
+                        <textarea type="text" asp-for="Description" class="form-control" placeholder="Description"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <br/>
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-light">Cancel</a>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
