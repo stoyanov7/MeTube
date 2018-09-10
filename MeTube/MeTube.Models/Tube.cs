@@ -20,7 +20,7 @@ namespace MeTube.Models
         public int Views { get; set; }
 
         [Required]
-        public int UploaderId { get; set; }
+        public string UploaderId { get; set; }
         public ApplicationUser Uploader { get; set; }
     }
 }
