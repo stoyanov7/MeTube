@@ -1,0 +1,24 @@
+﻿@using MeTube.Models.ViewModels
+@model TubeDetailsViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<div class="text-center">
+    <h1>@Model.Title</h1>
+</div>
+<div class="row">
+    <div class="col-6 text-center">
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/{{{youTubeId}}}"
+                frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+    </div>
+    <div class="col-6">
+        <p class="text-info tube-author">@Model.Author</p>
+        <p class="text-info tube-views">@Model.Views</p>
+        <p>@Model.Description</p>
+    </div>
+</div>
+

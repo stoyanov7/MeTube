@@ -43,6 +43,7 @@
 
             // Add application services.
             services.AddTransient<IDatabaseInitializerService, DatabaseInitializerService>();
+            services.AddTransient<ITubeService, TubeService>();
 
             services.Configure<CookiePolicyOptions>(options =>
             {
