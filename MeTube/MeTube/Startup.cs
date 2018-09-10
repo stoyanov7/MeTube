@@ -43,7 +43,6 @@
 
             // Add application services.
             services.AddTransient<IDatabaseInitializerService, DatabaseInitializerService>();
-            services.AddTransient<IUserService, UserService>();
 
             services.Configure<CookiePolicyOptions>(options =>
             {

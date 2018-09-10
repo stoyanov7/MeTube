@@ -1,8 +1,7 @@
-﻿@using MeTube.Models.ViewModels
-@model UserProfileViewModel 
+﻿@model MeTube.Models.ApplicationUser
 
 <div class="text-center">
-    <h2 class="text-info text-center">@Model.Username</h2>
+    <h2 class="text-info text-center">Hello @Model.UserName!</h2>
     <h3 class="text-info text-center">@Model.Email</h3>
 </div>
 <div class="row">
@@ -16,7 +15,7 @@
             </tr>
         </thead>
         <tbody>
-            {{{tubes}}}
+            @Model.Tubes
         </tbody>
     </table>
 </div>

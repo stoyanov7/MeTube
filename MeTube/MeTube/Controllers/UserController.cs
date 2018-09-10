@@ -6,22 +6,17 @@
     using Microsoft.AspNetCore.Mvc;
     using Models;
     using Models.BindingModels;
-    using Models.ViewModels;
-    using Services.Contracts;
 
     public class UserController : Controller
     {
         private readonly SignInManager<ApplicationUser> signManager;
         private readonly UserManager<ApplicationUser> userManager;
-        private readonly IUserService userService;
 
         public UserController(SignInManager<ApplicationUser> signManager,
-            UserManager<ApplicationUser> userManager,
-            IUserService userService)
+            UserManager<ApplicationUser> userManager)
         {
             this.signManager = signManager;
             this.userManager = userManager;
-            this.userService = userService;
         }
 
         [HttpGet]
@@ -105,15 +100,16 @@
             return this.RedirectToAction("Index", "Home");
         }
 
-        public IActionResult Profile(string id)
+        public IActionResult Profile()
         {
-            if (!this.userService.Exists(id))
+            var userId = this.userManager.GetUserId(this.HttpContext.User);
+
+            if (userId == null)
             {
                 return this.RedirectToAction("Index", "Home");
             }
 
-            var user = this.userService.ById<UserProfileViewModel>(id);
-
+            var user = this.userManager.FindByIdAsync(userId).Result;
             return this.View(user);
         }
     }
